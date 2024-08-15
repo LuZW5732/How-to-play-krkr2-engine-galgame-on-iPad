@@ -31,7 +31,7 @@ https://tweak-box.com/altstore/#google_vignette
 
 点击任务栏右下角，会看到AltServer的图标（红框中）
 
-![image](photos/photo (1).png)
+![image](photos/photo1.png)
 
 此时，打开iTunes，将你的iPad通过USB连接至电脑，iPad上会出现信任弹窗，点击“信任”并输入锁屏密码，然后可以看到iTunes软件界面左上角出现了iPad图标，点击iPad进入其总览界面，勾选“通过WIFI进行同步”（尚不清楚是否影响校园网流量，学生党不建议勾选），该功能可以使以后每次更新证书时不通过USB连接电脑即可实现更新。
 
