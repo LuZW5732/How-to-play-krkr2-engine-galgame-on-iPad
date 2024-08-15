@@ -37,10 +37,13 @@ https://tweak-box.com/altstore/#google_vignette
 
 左键点击任务栏中的AltServer图标，点击“Install AltStore”，然后会出现连接设备列表，点击你的iPad，此时会要求你提供你的AppleID和密码，部分账户还会要求提供二次验证的验证码（在iPad显示为想要在某地登录账户，点击允许，然后才会显示验证码），按要求输入。等待一段时间直到弹窗显示安装成功即可。
 
+![image](photos/photo2.png)
+
 iPadOS18目前尚不稳定，安装可能失败，多尝试几次即可。
 
 安装完成后，打开iPad上的AltStore，会提示“未受信任的开发者”，此时打开iPad系统设置，点击通用-VPN与设备管理，此时会出现其中一个选项是你的AppleID邮箱，点击进入，然后点击蓝色字体的“信任”即可。
 
+![image](photos/photo3.png)
 
 ## 通过AltStore安装xp3player
 
@@ -51,6 +54,8 @@ iPadOS18目前尚不稳定，安装可能失败，多尝试几次即可。
 提取码0721
 
 进入AltStore app，在底部导航栏点击My Apps，然后点击左上角+号，在弹出的页面中选择你刚刚导入的xp3player的ipa文件。
+
+![image](photos/photo4.png)
 
 安装可能失败，可多次重连USB或重新打开AltStore尝试。
 
@@ -66,18 +71,23 @@ iPadOS18目前尚不稳定，安装可能失败，多尝试几次即可。
 
 这里需要保持USB连接，打开爱思助手，会自动显示你的iPad综述界面，点击侧边栏的“应用游戏”，找到xp3player，点击右侧的“浏览”。
 
+![image](photos/photo5.png)
+
 此时会弹出新的界面，点击左侧的Documents，点击“导入”，将你的krkr版gal的整个文件夹传输进去。
 
+![image](photos/photo6.png)
 
 ## 启动游戏（或者检测游戏状态）
 
 通过爱思助手导入成功后，即可前往xp3player进行游玩了，一般通过点击data.xp3启动。
 
+![image](photos/photo7.png)
+
 如果点击之后成功启动了游戏，那么恭喜你，你可以退出本教程了，记得每6天连接电脑通过AltStore更新一次证书（点击My Apps界面内的Refresh All）。
 
 如果点击之后软件闪退，或者卡住没有反应，那么你就需要继续往下看了。
 
-本教程仅提供汉化组系统弹窗导致的软件卡死解决办法，其他问题请自行百度。
+本教程仅提供汉化组**系统弹窗导致的软件卡死**解决办法，其他问题请自行百度。
 
 ## 简易修复方法
 
@@ -94,6 +104,7 @@ iPadOS18目前尚不稳定，安装可能失败，多尝试几次即可。
 
 此方法限定特殊条件，至少我还没遇见过。来自于同视频的评论区，感谢贡献。
 
+![image](photos/photo8.png)
 
 方法三：
 
@@ -135,6 +146,8 @@ Github下载地址：https://github.com/crskycode/GARbro/releases
 
 3.搜索Install
 
+![image](photos/photo9.png)
+
 4.点击Package Control：Install Package
 
 5.等待一小会儿，重复1234步骤
@@ -143,37 +156,59 @@ Github下载地址：https://github.com/crskycode/GARbro/releases
 
 7.点击第一个关联项，稍等片刻即可变为中文。
 
-## 如何解包
+### 如何解包
 
 打开GARbro，点击右上角文件-打开，找到你要解包的游戏文件夹，一般我们要找的文件名为data.xp3或者“运行游戏.xp3”，我们这里以操作流程较为简单的kr版《根本没有中之人！》为例。
 
+![image](photos/photo10.png)
+
 一般情况下xp3文件不会被加密，这里直接选择没有加密并确定。
+
+![image](photos/photo11.png)
 
 然后我们就能看到解包后的文件目录了。一般我们需要检查startup.tjs文件，点击该文件，右键点击提取，我建议在源目录新建文件夹用于放置提取的文件。
 
+![image](photos/photo12.png)
 
-## 寻找系统弹窗相关文件并修改
+![image](photos/photo13.png)
+
+### 寻找系统弹窗相关文件并修改
 
 提取出来之后，我们使用刚刚安装的Sublime Text打开startup.tjs，一般会看到如图所示界面。这里先对使用了普通tjs的游戏进行解释。
 
+![image](photos/photo14.png)
+
 但是根据在iPad尝试启动时显示的画面，系统弹窗显示的内容不在这里。
+
+![image](photos/photo15.png)
 
 如果这里打开时显示的是如图所示乱码（以kr版《与你相连的恋爱FLAG》为例），那么请往后查看“压缩tjs与tjs2”部分。
 
+![image](photos/photo16.png)
 
 根据第20行，该文件最后指向了游戏system文件夹中的Initialize.tjs，我们将其提取出来并打开，显示以下内容。
 
+![image](photos/photo17.png)
+
 现在我们看到第三行出现了System.inform("https://acg-moe.com","By 御宅同萌");，这便是我们要找的，直接将这行语句删除，保存文件并关闭。
 
-文件封包与重新导入
+### 文件封包与重新导入
 
 现在我们回到GARbro，选中整个游戏目录提取出来。
 
+![image](photos/photo18.png)
+
 然后我们将修改后的Initialize.tjs替换掉system文件夹中的同名文件。
+
+![image](photos/photo19.png)
 
 现在打开GARbro，切换到提取后的游戏目录。
 
+![image](photos/photo20.png)
+
 选中所有文件，右键点击创建压缩文件
+
+![image](photos/photo21.png)
 
 在新弹出的窗口中勾选上“保持目录结构”。同时点击文件名右侧按钮，将创建位置指向到临时存放游戏文件的文件夹。
 
@@ -181,15 +216,23 @@ Github下载地址：https://github.com/crskycode/GARbro/releases
 
 解决办法：从bg文件夹开始从上往下选中所有文件即可。
 
+![image](photos/photo22.png)
+
+![image](photos/photo23.png)
 
 封包完成后，需要关闭GARbro才能删除原先的“运行游戏.xp3”，然后用刚刚我们制作的文件来替换它，我这里用data.xp3来替换，它们的效果是一样的。
 
+![image](photos/photo24.png)
+
 此时可以删除临时存放文件，将游戏文件夹重新导入xp3player，因为先前我们已经导入过一次用于测试了，所以这次我们只需要用爱思助手删除原来的data.xp3，再将新的data.xp3文件导入即可。
+
+![image](photos/photo25.png)
 
 现在，我们在xp3player中启动data.xp3，就能正常游玩了。
 
+![image](photos/photo26.png)
 
-## 压缩tjs与tjs2
+### 压缩tjs与tjs2
 
 这里需要用到WinHex进行查看。
 
@@ -198,6 +241,8 @@ Github下载地址：https://github.com/crskycode/GARbro/releases
 提取码：0721 
 
 我们用WinHex打开startup.tjs，发现右侧首行出现了TJS2100字样，这代表该文件实为tjs2，否则就是压缩tjs。
+
+![image](photos/photo27.png)
 
 压缩tjs的处理方法需要使用KirikiriDescrambler，将tjs文件拖动到KirikiriDescrambler.exe打开，不用在压缩回去。
 
@@ -221,22 +266,37 @@ Github下载链接：https://github.com/marcussacana/KrKrZSceneManager/releases/
 
 打开ScnEditorGUI.exe，显示如下画面。
 
+![image](photos/photo28.png)
+
 右键调出菜单，选择TJS2-Open
+
+![image](photos/photo29.png)
 
 选择打开startup.tjs，显示如下画面。
 
+![image](photos/photo30.png)
+
 这个游戏的startup.tjs也引导我们去system/Initialize.tjs，再打开Initialize.tjs，现在出现了我们要找的内容……（这里以较难修改的小鸟游 晓大佬制作的kr版为例）
+
+![image](photos/photo31.png)
 
 这种情况修改起来非常麻烦，因此我们转而使用PC原版的相同文件进行比较。
 
+![image](photos/photo32.png)
+
 这里能发现两个文件存在极大不同，但是却可以直接拿PC原版的Initialize.tjs文件替换krkr版的相同文件。直接替换后重新封包导入即可游玩，但是可能会影响性能和部分功能实现。
 
+![image](photos/photo33.png)
 
 现在讲其他情况，以妹抱为例。
 
 将PC原版的startup.tjs与kr版文件进行对比，发现两者最后指向了不同的文件。
 
+![image](photos/photo34.png)
+
 Krkr版最后指向了startup2.tjs，接下来我们查看startup2.tjs，于是找到了源头。
+
+![image](photos/photo35.png)
 
 解决办法也很简单，直接修改语句重新指向Initialize.tjs或者拿原版tjs替换都可以，然后重新封包导入即可。
 
