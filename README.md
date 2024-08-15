@@ -31,8 +31,6 @@ https://tweak-box.com/altstore/#google_vignette
 
 点击任务栏右下角，会看到AltServer的图标（红框中）
 
-![photo1](./photos/photo (1).png)
-
 此时，打开iTunes，将你的iPad通过USB连接至电脑，iPad上会出现信任弹窗，点击“信任”并输入锁屏密码，然后可以看到iTunes软件界面左上角出现了iPad图标，点击iPad进入其总览界面，勾选“通过WIFI进行同步”（尚不清楚是否影响校园网流量，学生党不建议勾选），该功能可以使以后每次更新证书时不通过USB连接电脑即可实现更新。
 
 左键点击任务栏中的AltServer图标，点击“Install AltStore”，然后会出现连接设备列表，点击你的iPad，此时会要求你提供你的AppleID和密码，部分账户还会要求提供二次验证的验证码（在iPad显示为想要在某地登录账户，点击允许，然后才会显示验证码），按要求输入。等待一段时间直到弹窗显示安装成功即可。
