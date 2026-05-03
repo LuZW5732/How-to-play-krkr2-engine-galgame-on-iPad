@@ -3,7 +3,11 @@
 
 本教程适用于iPadOS16/17/18，旧版系统方法更多，也可参考此方法操作。作者 路ZW
 
-这个教程直接搬运自我撰写的同名pdf文件，未作任何更改。
+iOS/iPadOS 26已经修复了关于弹窗的bug，可以直接安装xp3player游玩了。
+
+随着时代变迁（），已经推出了sidestore安装方式，比altstore更加方便，具体方法自己百度。
+
+
 
 可能需要用到的软/硬件：iPad、运行windows系统的电脑、爱思助手、AltStore、GARbro mod版、ScnEditorGUI、Sublime Text、WinHex、你下载的krkr版gal文件、同款gal的PC版文件
 
